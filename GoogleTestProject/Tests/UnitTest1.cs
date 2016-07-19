@@ -38,11 +38,12 @@ namespace GoogleTestProject
 
             // Verify some search results were displayed
             // Note: Coypu doesn't return null if the web element is not found
-            Assert.IsTrue(searchSection.Exists(), "No search results were not displayed.");
+            Assert.IsTrue(searchSection.Exists(), "No search results were displayed.");
 
-            // All of the search links are present under h3[class='r'] tag (see h3a.PNG)
+            // All of the search are present in div[class='g'] tag (see divg.PNG)
             // Get all the result links under searchSection
-            List<SnapshotElementScope> links = searchSection.FindAllCss("h3.r a").ToList();
+            // If we only want to verify links, use searchSection.FindAllCss("h3.r a") (see h3a.PNG)
+            List<SnapshotElementScope> links = searchSection.FindAllCss("div[class='g']").ToList();
 
             // Verify number of results is at least what we expect
             if (links.Count() < resultNumber)
