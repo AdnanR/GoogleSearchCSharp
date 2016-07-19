@@ -86,7 +86,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 6
  testRunner.When(string.Format("I enter {0} in the search box", searchTerm), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 7
- testRunner.Then(string.Format("the 2nd search result should contain the {0} text", searchTerm), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("the 1st search result should contain the {0} text", searchTerm), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
